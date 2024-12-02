@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MassProv</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on MassProv</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;MassProv is a non-profit organization committed to enriching the Greater Boston community through the power of improv comedy. We partner with local theaters to offer free and low-cost workshops, classes, and shows, making the art of improvisation accessible to people of all ages and backgrounds. By fostering creativity, collaboration, and confidence, we aim to create a supportive and inclusive environment where individuals can explore their artistic potential and build meaningful connections.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Calendar</title>
+      <link>http://localhost:1313/events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/events/</guid>
+      <description>&lt;!-- raw HTML omitted --&gt;</description>
+    </item>
+  </channel>
+</rss>
