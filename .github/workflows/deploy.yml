@@ -56,9 +56,10 @@ jobs:
           HUGO_ENVIRONMENT: production
           TZ: America/Los_Angeles
         run: |
+          cd massprov-hugo
           hugo \
             --gc \
-            --config ./massprov-hugo/config.toml \
+            --config ./config.toml \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
