@@ -1,6 +1,6 @@
 ---
 title: "Calendar"
-description: "Check out our upcoming events and workshops on our Google Calendar."
+description: "Check out our upcoming events on our Google Calendar."
 menu:
   main:
     weight: 2
