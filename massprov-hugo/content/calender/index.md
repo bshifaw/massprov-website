@@ -6,7 +6,7 @@ menu:
     weight: 2
 ---
 
-# Upcoming Events
+## Upcoming Events
 
 Check out our Google Calendar for local indie improv shows!
 
