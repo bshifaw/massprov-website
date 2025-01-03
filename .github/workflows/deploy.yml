@@ -62,6 +62,8 @@ jobs:
             --config ./config.toml \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Wait for 15 seconds
+        run: sleep 15
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
