@@ -3,7 +3,7 @@
     <div class="hero-card">
       <div class="pill">A warm, welcoming improv community</div>
       <h1>MassProv supports improvisers across Massachusetts.</h1>
-      <p>We’re a community of improvisers connecting people through events, workshops, jams, and a supportive WhatsApp network. Find indie shows, jams, workshops, and resources to help you grow and perform your best.</p>
+      <p>MassProv is a community group supporting improvisers across Massachusetts. We share a monthly newsletter and host an active WhatsApp network to help people find indie shows, jams, workshops, and collaborators. Our goal is to make it easier for improvisers to stay connected, perform, and grow together. </p>
       <div style="display:flex; gap:12px; flex-wrap:wrap; margin-top:18px;">
         <a class="btn btn-primary" href="{{ "contact/" | relURL }}">Contact / Join WhatsApp</a>
         <a class="btn btn-secondary" href="{{ "calendar/" | relURL }}">View Calendar</a>
@@ -12,30 +12,53 @@
     <div class="grid" style="gap:14px;">
       <div class="card">
         <h3>What we do</h3>
-        <p>Promote indie improv shows and jams, share stage/practice space options, and connect performers with education opportunities.</p>
+        <p>We highlight indie improv shows and jams, share practice and stage opportunities, and keep a running pulse on what’s happening in the community. We also occasionally partner with instructors or teams to help promote workshops and special events.</p>
       </div>
       <div class="card">
         <h3>Who it’s for</h3>
-        <p>Improvisers in Massachusetts and nearby areas, from brand new players to experienced teams, looking for shows, rehearsals, or community.</p>
+        <p>Improvisers in Greater Boston and nearby areas, from brand-new players to seasoned performers, looking for shows, rehearsals, collaborators, or community.</p>
       </div>
       <div class="card">
         <h3>How to engage</h3>
-        <p>Submit events, browse resources, attend shows and jams, and join the WhatsApp community for fast updates.</p>
+        <p>Join the WhatsApp community, subscribe to the newsletter, submit your events, and come out to shows and jams. Share what you’re working on, support other performers, and use MassProv as a hub to stay connected.</p>
       </div>
     </div>
   </section>
 
+  <section class="section community-highlight">
+    <div class="community-details">
+      <p class="pill" style="margin:0;">How to engage</p>
+      <h2>Warm-ups, workshops, and active collaborators.</h2>
+      <p class="muted">Share rehearsal spaces, swap new exercises, and find other improvisers looking to coach, guest, or jam together. MassProv is a space to try things out and keep your practice steady.</p>
+      <a class="btn btn-secondary" href="{{ "contact/" | relURL }}">Ask to join WhatsApp</a>
+    </div>
+    <figure class="illustration-card">
+      <img src="{{ "images/Improv_Workshop_Group_Exercise.png" | relURL }}" alt="Illustration of a circle of improvisers practicing a warm-up together" loading="lazy">
+      <figcaption>
+        <h3>Community workshops and jams</h3>
+        <p class="muted" style="margin:0;"></p>
+      </figcaption>
+    </figure>
+  </section>
+
   <section class="section">
-    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
-      <div>
+    <div class="events-layout">
+      <div class="events-copy">
         <p class="pill" style="margin:0;">Events</p>
         <h2>See what’s on stage and in rehearsal.</h2>
         <p class="muted">Check the calendar for indie shows and jams. Submit your event and we’ll add it for the community.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="{{ "calendar/" | relURL }}">View Calendar</a>
+          <a class="btn btn-secondary" href="{{ "submit-event/" | relURL }}">Submit an Event</a>
+        </div>
       </div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="{{ "calendar/" | relURL }}">View Calendar</a>
-        <a class="btn btn-secondary" href="{{ "submit-event/" | relURL }}">Submit an Event</a>
-      </div>
+      <figure class="illustration-card">
+        <img src="{{ "images/Improv_Performance_Stage.png" | relURL }}" alt="Illustration of three performers on stage under a warm spotlight" loading="lazy">
+        <figcaption>
+          <h3>Indie shows from across the state</h3>
+          <p class="muted" style="margin:0;"></p>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
