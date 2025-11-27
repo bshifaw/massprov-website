@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ if .Title }}{{ .Title }} | {{ end }}{{ .Site.Title }}</title>
+    {{ with .Description }}<meta name="description" content="{{ . }}">{{ end }}
+    <link rel="stylesheet" href="{{ "css/main.css" | relURL }}">
+    {{ with .Site.Params.favicon }}<link rel="icon" href="{{ . | relURL }}">{{ end }}
+  </head>
+  <body class="page-shell">
+    <header class="site-header">
+      <nav class="nav">
+        <a class="brand" href="{{ "/" | relURL }}">
+          {{ with .Site.Params.site_logo }}
+            <img src="{{ . | relURL }}" alt="MassProv logo" />
+          {{ end }}
+          <span>{{ .Site.Title }}</span>
+        </a>
+        <div class="nav-links">
+          {{ range .Site.Menus.main }}
+            <a href="{{ .URL }}">{{ .Name }}</a>
+          {{ end }}
+          <a class="btn btn-primary" href="{{ "contact/" | relURL }}">Get in touch</a>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      {{ block "main" . }}{{ end }}
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div>
+          <div class="brand">
+            {{ with .Site.Params.site_logo }}
+              <img src="{{ . | relURL }}" alt="MassProv logo small" />
+            {{ end }}
+            <span>{{ .Site.Title }}</span>
+          </div>
+          <p class="muted">MassProv is a community for improvisers in Massachusetts and surrounding areas. We share events, resources, and support for performers.</p>
+        </div>
+        <div>
+          <h4>Stay Connected</h4>
+          <p class="muted">Ask to join the WhatsApp group or reach out with questions.</p>
+          <a class="btn btn-primary" href="{{ "contact/" | relURL }}">Contact / Join</a>
+        </div>
+        <div>
+          <h4>Explore</h4>
+          <div class="grid" style="grid-template-columns: 1fr;">
+            <a href="{{ "calendar/" | relURL }}">Calendar</a>
+            <a href="{{ "posts/" | relURL }}">Articles & Resources</a>
+            <a href="{{ "about/" | relURL }}">About</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

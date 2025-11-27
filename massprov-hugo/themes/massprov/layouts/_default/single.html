@@ -1,0 +1,10 @@
+{{ define "main" }}
+  <section class="section">
+    <p class="pill" style="margin:0;">{{ .Section | title }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Params.description }}<p class="muted">{{ . }}</p>{{ end }}
+    <article class="card" style="margin-top:16px;">
+      {{ .Content }}
+    </article>
+  </section>
+{{ end }}
