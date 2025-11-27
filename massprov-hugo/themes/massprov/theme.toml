@@ -1,0 +1,8 @@
+name = "massprov"
+license = "MIT"
+licenselink = "https://opensource.org/licenses/MIT"
+description = "Custom theme for MassProv"
+homepage = "https://www.massprov.org"
+tags = ["landing", "nonprofit", "community"]
+features = ["responsive", "seo"]
+min_version = "0.80.0"

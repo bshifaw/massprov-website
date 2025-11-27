@@ -38,8 +38,10 @@ Implementation plan
 - SEO/metadata: set favicon/manifest, generate social preview image using logo/gradient, add robots.txt/sitemap (Hugo auto) and 404 page; update page-level meta descriptions.
 - QA & deployment: local Hugo build, responsive spot-check (mobile/desktop), verify embeds and nav, then deploy via GitHub Pages (custom domain already set); check cache headers/asset minification.
 
-Open questions for you (remaining)
-- Please confirm the Google Form endpoints/field IDs for the contact form and the event submission form so I can wire the inline forms correctly (can grab from your existing forms if you share links).
+Form endpoints (from you)
+- Event submission form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScvhS_ZFt9PyWyBwYdmuc09NyPAomYMxY2XSVTV8MPm_PDH6w/formResponse`
+- Contact form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse`
+- Still needed: the `entry.xxxxx` field IDs for each form input (Name, Email, Message, WhatsApp opt-in, plus the event fields). If you share the form links or the field ID mapping, I’ll wire the inline forms to submit directly.
 
 Palette + type recommendation (to match logo)
 - Navy: #1D2A39 (anchors brand text/buttons; matches logo text)
@@ -54,3 +56,18 @@ Forms plan (constraints noted)
 - Keep Google Form backend (free) but build inline forms styled to the site. We can either:
   - Direct-submit to the Google Form endpoint (recommended: least friction, retains free tier).
   - Or, optionally add a small third-party form endpoint later if you choose (currently no subscription, so we’ll stick with Google Form submission).
+
+Google Form field mappings
+- Contact form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse`
+  - `entry.1813342153` → Email (required)
+  - `entry.954985246` → Your Name
+  - `entry.1690793972` → Message
+  - Good: explicit public Email field exists; we can POST from inline form.
+- Event submission form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScvhS_ZFt9PyWyBwYdmuc09NyPAomYMxY2XSVTV8MPm_PDH6w/formResponse`
+  - `entry.1362049625` → Event Title (required)
+  - `entry.981769902_year|month|day` → Date parts (required)
+  - `entry.1552516303_hour|minute|ampm` → Start Time parts (required)
+  - `entry.1850328492` → Location (required)
+  - `entry.1296486447` → Event Description (multi-line; optional per form text)
+  - `entry.2142346993` → Contact info (email preferred; not shown publicly)
+  - Note: The Google form is set up as required for Title/Date/Start Time/Location; keep inline form validation in sync.

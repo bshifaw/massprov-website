@@ -1,0 +1,45 @@
+{{ define "main" }}
+  <section class="section">
+    <p class="pill" style="margin:0;">Contact</p>
+    <h1>Reach out or join the WhatsApp community.</h1>
+    <p class="muted">Ask a question, share ideas, or request an invite to the MassProv WhatsApp group.</p>
+
+    <div class="grid" style="gap:20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top:20px;">
+      <div class="card">
+        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse" method="POST" target="_self">
+          <input type="hidden" name="fvv" value="1">
+          <input type="hidden" name="pageHistory" value="0">
+          <input type="hidden" name="fbzx" value="-12345">
+          <div class="field">
+            <label for="email">Email *</label>
+            <input id="email" name="entry.1813342153" type="email" required autocomplete="email" />
+          </div>
+          <div class="field">
+            <label for="name">Name</label>
+            <input id="name" name="entry.954985246" type="text" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="message">Message (ask to join WhatsApp, or any question)</label>
+            <textarea id="message" name="entry.1690793972" required></textarea>
+          </div>
+          <div style="display:none;">
+            <label>Leave this blank</label>
+            <input type="text" name="hp_field" value="">
+          </div>
+          <button class="btn btn-primary" type="submit">Send</button>
+          <p class="muted" style="margin-top:10px;">Submits securely to Google Forms. Please avoid sharing sensitive info.</p>
+        </form>
+      </div>
+      <div class="card">
+        <h3>What to expect</h3>
+        <ul style="padding-left:18px; margin:0 0 12px;">
+          <li>Invite to the WhatsApp group (if requested)</li>
+          <li>Answers to questions about shows, jams, or resources</li>
+          <li>Volunteer opportunities and how to feature your events</li>
+        </ul>
+        <p class="muted">We aim to reply within a few days. For event submissions, use the submission form so we can add it quickly.</p>
+        <a class="btn btn-secondary" href="{{ "submit-event/" | relURL }}">Submit an event</a>
+      </div>
+    </div>
+  </section>
+{{ end }}
