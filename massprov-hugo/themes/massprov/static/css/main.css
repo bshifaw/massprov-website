@@ -176,6 +176,19 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
+.community-highlight,
+.events-layout {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.community-details,
+.events-copy {
+  flex: 1 1 320px;
+}
+
 .card {
   background: #fff;
   border-radius: var(--radius-md);
@@ -186,6 +199,31 @@ p {
 
 .card h3 {
   margin-top: 4px;
+}
+
+.illustration-card {
+  flex: 1 1 300px;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  margin: 0;
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(29, 42, 57, 0.06);
+}
+
+.illustration-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: var(--radius-md);
+}
+
+.illustration-card figcaption {
+  margin-top: 14px;
+}
+
+.illustration-card h3 {
+  margin-bottom: 6px;
 }
 
 .cta-band {
@@ -284,5 +322,12 @@ textarea {
   }
   .hero {
     padding-top: 48px;
+  }
+  .community-highlight,
+  .events-layout {
+    flex-direction: column;
+  }
+  .illustration-card {
+    width: 100%;
   }
 }

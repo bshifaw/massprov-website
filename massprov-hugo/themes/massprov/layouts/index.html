@@ -25,17 +25,40 @@
     </div>
   </section>
 
+  <section class="section community-highlight">
+    <div class="community-details">
+      <p class="pill" style="margin:0;">How to engage</p>
+      <h2>Warm-ups, workshops, and active collaborators.</h2>
+      <p class="muted">Share rehearsal spaces, swap new exercises, and find other improvisers looking to coach, guest, or jam together. MassProv is a space to try things out and keep your practice steady.</p>
+      <a class="btn btn-secondary" href="{{ "contact/" | relURL }}">Ask to join WhatsApp</a>
+    </div>
+    <figure class="illustration-card">
+      <img src="{{ "images/Improv_Workshop_Group_Exercise.png" | relURL }}" alt="Illustration of a circle of improvisers practicing a warm-up together" loading="lazy">
+      <figcaption>
+        <h3>Community workshops and jams</h3>
+        <p class="muted" style="margin:0;"></p>
+      </figcaption>
+    </figure>
+  </section>
+
   <section class="section">
-    <div style="display:flex; justify-content:space-between; align-items:center; gap:12px; flex-wrap:wrap;">
-      <div>
+    <div class="events-layout">
+      <div class="events-copy">
         <p class="pill" style="margin:0;">Events</p>
         <h2>See what’s on stage and in rehearsal.</h2>
         <p class="muted">Check the calendar for indie shows and jams. Submit your event and we’ll add it for the community.</p>
+        <div style="display:flex; gap:10px; flex-wrap:wrap;">
+          <a class="btn btn-primary" href="{{ "calendar/" | relURL }}">View Calendar</a>
+          <a class="btn btn-secondary" href="{{ "submit-event/" | relURL }}">Submit an Event</a>
+        </div>
       </div>
-      <div style="display:flex; gap:10px; flex-wrap:wrap;">
-        <a class="btn btn-primary" href="{{ "calendar/" | relURL }}">View Calendar</a>
-        <a class="btn btn-secondary" href="{{ "submit-event/" | relURL }}">Submit an Event</a>
-      </div>
+      <figure class="illustration-card">
+        <img src="{{ "images/Improv_Performance_Stage.png" | relURL }}" alt="Illustration of three performers on stage under a warm spotlight" loading="lazy">
+        <figcaption>
+          <h3>Indie shows from across the state</h3>
+          <p class="muted" style="margin:0;"></p>
+        </figcaption>
+      </figure>
     </div>
   </section>
 
