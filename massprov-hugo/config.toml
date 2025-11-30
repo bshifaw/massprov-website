@@ -14,6 +14,6 @@ pagerSize = 6 # this is set low for demonstrating with dummy content. Set to a h
 
 [params]
 author = "MassProv"
-favicon = "/images/massprove_symbol_logo.png"
-site_logo = "/images/massprove_symbol_logo.png"
+favicon = "/images/massprove_small_logo_v2.png"
+site_logo = "/images/massprove_symbol_logo_v2.png"
 description = "MassProv is a nonprofit community connecting improvisers across Massachusetts with shows, jams, resources, and support."
