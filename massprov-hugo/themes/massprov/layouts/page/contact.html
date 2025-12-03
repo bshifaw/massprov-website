@@ -6,7 +6,7 @@
 
     <div class="grid" style="gap:20px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-top:20px;">
       <div class="card">
-        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse" method="POST" target="_self">
+        <form id="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse" method="POST" target="_self">
           <input type="hidden" name="fvv" value="1">
           <input type="hidden" name="partialResponse" value="[null,null,&quot;-3194330751155562024&quot;]">
           <input type="hidden" name="pageHistory" value="0">
@@ -24,11 +24,13 @@
             <label for="message">Message (ask to join WhatsApp, or any question)</label>
             <textarea id="message" name="entry.1288429191" required></textarea>
           </div>
-          <div style="display:none;">
-            <label>Leave this blank</label>
-            <input type="text" name="hp_field" value="">
+          <div class="field hp-field" aria-hidden="true">
+            <label for="contact-check">Leave this blank</label>
+            <input id="contact-check" type="text" name="hp_field" tabindex="-1" autocomplete="off" value="">
           </div>
+          <input type="hidden" name="form_started_at" value="">
           <button class="btn btn-primary" type="submit">Send</button>
+          <p id="contact-form-status" class="muted" style="margin:6px 0 0;"></p>
           <p class="muted" style="margin-top:10px;">Submits securely to Google Forms. Please avoid sharing sensitive info.</p>
         </form>
       </div>
@@ -44,4 +46,44 @@
       </div>
     </div>
   </section>
+  <script>
+    (function () {
+      const form = document.getElementById('contact-form');
+      if (!form) return;
+
+      const statusEl = document.getElementById('contact-form-status');
+      const startedAt = Date.now();
+      const minDelayMs = 3000;
+
+      const startedField = form.querySelector('input[name="form_started_at"]');
+      if (startedField) startedField.value = startedAt;
+
+      form.addEventListener('submit', function (event) {
+        const honeypot = form.querySelector('input[name="hp_field"]');
+        const elapsed = Date.now() - startedAt;
+
+        if (honeypot && honeypot.value.trim()) {
+          event.preventDefault();
+          if (statusEl) statusEl.textContent = 'Please leave the blank field empty.';
+          return;
+        }
+
+        if (elapsed < minDelayMs) {
+          event.preventDefault();
+          if (statusEl) statusEl.textContent = 'Please wait a few seconds before submitting.';
+          return;
+        }
+
+        if (statusEl) statusEl.textContent = '';
+      });
+    })();
+  </script>
+  <style>
+    .hp-field {
+      position: absolute;
+      left: -10000px;
+      height: 0;
+      overflow: hidden;
+    }
+  </style>
 {{ end }}
