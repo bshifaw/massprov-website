@@ -14,7 +14,7 @@ Hugo static site for MassProv, using a custom theme in `massprov-hugo/themes/mas
 
 ## Forms (Google Forms)
 - Inline forms post to Google Forms endpoints. If you edit the Google Form and IDs change, open “Get pre-filled link” in Google Forms to copy the current `entry.*` names, then update the Hugo templates (`layouts/page/contact.html`, `layouts/_default/submit-event.html`).
-- Contact form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScs6MR174VH7H2PvKi8HgEngw4LfTYf6wG3SWT8fUWQboqJag/formResponse`
+- Contact form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLSd-Dx_rkyi-3tw_1kt3forL6ulrxZxhNVY1jSTgJpXiGsZukw/formResponse`
 - Submit event form action: `https://docs.google.com/forms/u/0/d/e/1FAIpQLScvhS_ZFt9PyWyBwYdmuc09NyPAomYMxY2XSVTV8MPm_PDH6w/formResponse`
 
 ## Config
