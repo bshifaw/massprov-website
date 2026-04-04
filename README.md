@@ -5,7 +5,19 @@ Hugo static site for MassProv, using a custom theme in `massprov-hugo/themes/mas
 ## Structure
 - `massprov-hugo/` – Hugo project (content, layouts, static assets, config).
 - `massprov-hugo/themes/massprov/` – custom theme (templates, CSS, images).
-- Key pages: Home (`layouts/index.html`), Contact (`layouts/page/contact.html`), Calendar (`layouts/page/calendar.html`), Submit Event (`layouts/_default/submit-event.html`), About (`content/about/`), Posts (`content/posts/`).
+- Key pages: Home (`layouts/index.html`), Contact (`layouts/page/contact.html`), Calendar (`layouts/calendar/single.html`), Submit Event (`layouts/_default/submit-event.html`), About (`content/about/`), Posts (`content/posts/`).
+
+## Local development
+- Run the site locally from the Hugo project directory:
+
+```powershell
+cd massprov-hugo
+hugo server
+```
+
+- Open `http://localhost:1313/` in your browser to preview the site.
+- Stop the local server with `Ctrl+C`.
+- If Hugo is not installed yet, install Hugo first and then rerun `hugo server`.
 
 ## Design tokens
 - Palette: Navy `#1D2A39`, Teal `#2E6B73`, Terracotta `#C55A3A`, Ochre `#D29A3A`, Sand `#F1E6C5`.
