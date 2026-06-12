@@ -4,21 +4,20 @@
     <h1>{{ .Title }}</h1>
     {{ with .Params.description }}<p class="muted">{{ . }}</p>{{ end }}
     <div class="card" style="margin-top:16px; margin-bottom:16px;">
-      <p style="margin:0 0 8px;"><strong>Calendar courtesy of the Boston Improv Calendar team.</strong></p>
-      <p class="muted" style="margin:0 0 12px;">This calendar is maintained by another community organizer. We appreciate their work keeping the improv community informed.</p>
+      <p style="margin:0 0 8px;"><strong>Community improv calendar.</strong></p>
+      <p class="muted" style="margin:0 0 12px;">Listings combine events from the Boston Improv Calendar team and MassProv: Indie Improv Events.</p>
       <a class="btn btn-secondary" href="https://www.instagram.com/bostonimprovcalendar/" target="_blank" rel="noopener noreferrer">Visit @bostonimprovcalendar on Instagram</a>
     </div>
     <div class="card" style="margin-top:16px;">
-      <iframe src="https://calendar.google.com/calendar/embed?src=81687222fb24e4afa47ad547fe20830fd1fa5f5769f28dc166001ee646147d8e%40group.calendar.google.com&ctz=America%2FNew_York" style="border:0; width:100%; height:520px;" frameborder="0" scrolling="no" title="MassProv Calendar"></iframe>
+      <iframe src="https://calendar.google.com/calendar/embed?src=81687222fb24e4afa47ad547fe20830fd1fa5f5769f28dc166001ee646147d8e%40group.calendar.google.com&color=%23D50000&src=1b684ed3e75bec4193de4c65948cfc0f4774874b25ba137b4d5d0d9ca7101a08%40group.calendar.google.com&color=%237986CB&ctz=America%2FNew_York" style="border:0; width:100%; height:520px;" frameborder="0" scrolling="no" title="MassProv and Boston Improv Calendars"></iframe>
     </div>
   </section>
 
   <section class="section" id="submit-event">
     <p class="pill" style="margin:0;">Submit an event</p>
     <h2>Share your show, jam, or workshop.</h2>
-    {{/* <p class="muted">We'll add your submission to the MassProv Calendar. Include contact info in case we have questions.</p> */}}
-    {{/* <a class="btn btn-primary" style="margin-top:12px;" href="{{ "submit-event/" | relURL }}">Open submission form</a> */}}
-    <p class="muted">Boston Improv Calendar maintains this calendar. If you want your event considered for listing, follow their submission instructions.</p>
-    <a class="btn btn-primary" style="margin-top:12px;" href="https://linktr.ee/bostonimprovcalendar" target="_blank" rel="noopener noreferrer">View Boston Improv Calendar submission instructions</a>
+    <p class="muted">We can add indie improv events to the MassProv calendar. For Boston Improv Calendar listings, follow their submission instructions.</p>
+    <a class="btn btn-primary" style="margin-top:12px;" href="{{ "submit-event/" | relURL }}">Submit an event to MassProv</a>
+    <a class="btn btn-secondary" style="margin-top:12px;" href="https://linktr.ee/bostonimprovcalendar" target="_blank" rel="noopener noreferrer">View Boston Improv Calendar submission instructions</a>
   </section>
 {{ end }}
